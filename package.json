@@ -1,6 +1,6 @@
 {
   "name": "torii-salesforce-oauth2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Torii provider for authenticating with Salesforce.",
   "keywords": [
     "ember-addon",

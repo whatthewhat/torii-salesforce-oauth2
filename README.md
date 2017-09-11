@@ -38,9 +38,9 @@ module.exports = function(environment) {
 See [Torii](https://github.com/Vestorly/torii) and [Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_web_server_oauth_flow.htm) docs for more.
 
 
-### URL decoding the authorization code
+### URL decoding the authorization code (torii < 0.9.5)
 
-At the moment the authorization code that is returned by Salesforce is URL encoded and needs to be decoded before using it to obtain an access token:
+The authorization code that is returned by Salesforce is URL encoded and needs to be decoded before using it to obtain an access token if your torii version is lower than 0.9.5:
 
 ```js
 this.get('torii').open('salesforce-oauth2').then(
@@ -51,7 +51,7 @@ this.get('torii').open('salesforce-oauth2').then(
 );
 ```
 
-In the future this will likely be handled in the provider, see https://github.com/Vestorly/torii/issues/323 for more details.
+Since 0.9.5 this is handled in torii, see https://github.com/Vestorly/torii/pull/376.
 
 ## Contributing
 

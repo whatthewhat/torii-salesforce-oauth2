@@ -6,7 +6,7 @@ export default OAuth2Bearer.extend({
   baseUrl: 'https://login.salesforce.com/services/oauth2/authorize',
 
   // additional params that this provider requires
-  optionalUrlParams: [
+  optionalUrlParams: Object.freeze([
     'scope',
     'display',
     'code_challenge',
@@ -14,9 +14,9 @@ export default OAuth2Bearer.extend({
     'login_hint',
     'nonce',
     'prompt'
-  ],
+  ]),
 
-  responseParams: ['code', 'state'],
+  responseParams: Object.freeze(['code', 'state']),
 
   scope: configurable('scope', 'api'),
   display: configurable('display', ''),

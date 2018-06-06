@@ -1,7 +1,7 @@
 import { getConfiguration, configure } from 'torii/configuration';
 import SalesforceOAuth2Provider from 'torii-salesforce-oauth2/torii-providers/salesforce-oauth2';
-import Ember from 'ember';
 import QUnit from 'qunit';
+import { run } from '@ember/runloop';
 
 let { module, test } = QUnit;
 let provider;
@@ -18,7 +18,7 @@ module('Unit - SalesforceOAuth2Provider', {
     provider = SalesforceOAuth2Provider.create();
   },
   after() {
-    Ember.run(provider, 'destroy');
+    run(provider, 'destroy');
     configure(originalConfiguration);
   }
 });

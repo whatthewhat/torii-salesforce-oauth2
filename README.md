@@ -1,5 +1,7 @@
 # torii-salesforce-oauth2
 
+[![Build Status](https://travis-ci.org/whatthewhat/torii-salesforce-oauth2.svg?branch=master)](https://travis-ci.org/whatthewhat/torii-salesforce-oauth2)
+
 This addon allows your Ember.js app to authenticate with Salesforce using [Torii](https://github.com/Vestorly/torii).
 
 ## Usage

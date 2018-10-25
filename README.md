@@ -15,26 +15,17 @@ ember install torii-salesforce-oauth2
 After that add the appropriate configurations to your `config/environment.js`:
 
 ```js
-// config/environment.js
-/* jshint node: true */
-
 module.exports = function(environment) {
   var ENV = {
-    /* ... */
     torii: {
       providers: {
-        /* ... */
         'salesforce-oauth2': {
           apiKey: 'your_client_id',
           redirectUri: 'http://localhost:4200',
           scope: 'api refresh_token'
         }
       }
-    }
-  };
-  /* ... */
-  return ENV;
-};
+/* ... */
 ```
 
 See [Torii](https://github.com/Vestorly/torii) and [Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_web_server_oauth_flow.htm) docs for more.
@@ -47,7 +38,7 @@ The authorization code that is returned by Salesforce is URL encoded and needs t
 ```js
 this.get('torii').open('salesforce-oauth2').then(
   (authorization) => {
-    const authCode = decodeURIComponent(authorization.authorizationCode);
+    let authCode = decodeURIComponent(authorization.authorizationCode);
     // ...
   }
 );
@@ -61,8 +52,7 @@ Since 0.9.5 this is handled in torii, see https://github.com/Vestorly/torii/pull
 
 * `git clone` this repository
 * `cd torii-salesforce-oauth2`
-* `npm install`
-* `bower install`
+* `yarn install`
 
 ### Running tests
 

@@ -65,7 +65,6 @@ Since 0.9.5 this is handled in torii, see https://github.com/Vestorly/torii/pull
 * `ember serve`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
 License
 ------------------------------------------------------------------------------
